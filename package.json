@@ -40,7 +40,7 @@
     "chat",
     "components",
     "detaysoft",
-    "native",
+    "native"
   ],
   "license": "MIT",
   "jest": {
