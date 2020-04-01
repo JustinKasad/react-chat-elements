@@ -52,10 +52,6 @@ export class MessageBox extends Component {
                 className={classNames('rce-container-mbox', this.props.className)}
                 onClick={this.props.onClick}>
                 {
-                    this.props.renderAddCmp instanceof Function &&
-                    this.props.renderAddCmp()
-                }
-                {
                     this.props.type === 'system' ?
                         <SystemMessage
                             text={this.props.text} />
@@ -155,6 +151,11 @@ export class MessageBox extends Component {
                                         view={this.props.view}
                                         data={this.props.data}
                                         uri={this.props.uri || this.props.text} />
+                                }
+                                
+                                {
+                                    this.props.renderAddCmp instanceof Function &&
+                                    this.props.renderAddCmp()
                                 }
 
                                 <div
